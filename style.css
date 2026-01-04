@@ -4,101 +4,163 @@
 
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background: #0f172a;
-  color: white;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #0f172a, #1a1f2b);
+  color: #fff;
   text-align: center;
 }
 
 /* HEADER */
 header {
-  padding: 40px 20px;
+  padding: 60px 20px;
+  background: rgba(255, 165, 0, 0.1);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
 }
 
 header h1 {
+  font-size: 3rem;
   margin-bottom: 10px;
+  color: #ff8c00;
+  text-shadow: 0 0 10px #ff8c00;
+}
+
+header p {
+  font-size: 1.2rem;
+  opacity: 0.8;
 }
 
 /* CARDS */
 .cards {
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 30px;
   flex-wrap: wrap;
-  padding: 20px;
+  padding: 50px 20px;
 }
 
 .card {
   background: #111827;
-  padding: 25px;
-  width: 220px;
-  border-radius: 15px;
+  padding: 30px;
+  width: 240px;
+  border-radius: 20px;
   position: relative;
-  box-shadow: 0 0 20px rgba(0,0,0,0.4);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.6);
 }
 
 .card h2 {
   margin-bottom: 10px;
+  color: #fff;
+  font-size: 1.5rem;
 }
 
 .price {
   font-size: 24px;
-  color: #22c55e;
+  color: #ffa500; /* Orange */
+  margin-bottom: 15px;
 }
 
 .popular {
-  border: 2px solid #e50914;
+  border: 3px solid #ff8c00;
 }
 
 .badge {
   position: absolute;
-  top: -10px;
-  right: -10px;
-  background: #e50914;
-  padding: 5px 10px;
-  border-radius: 10px;
+  top: -12px;
+  right: -12px;
+  background: #ff8c00;
+  padding: 5px 12px;
+  border-radius: 12px;
   font-size: 12px;
+  font-weight: bold;
 }
 
 /* ORDER FORM */
 .order {
-  padding: 40px 20px;
+  padding: 50px 20px;
+  background: rgba(255, 165, 0, 0.03);
+  margin: 50px 0;
+  border-radius: 25px;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  backdrop-filter: blur(10px);
+}
+
+.order h2 {
+  margin-bottom: 25px;
+  color: #ff8c00;
+  text-shadow: 0 0 10px #ff8c00;
 }
 
 form {
-  max-width: 400px;
-  margin: auto;
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 15px;
 }
 
 input, select, button {
-  padding: 12px;
-  border-radius: 8px;
+  padding: 15px;
+  border-radius: 12px;
   border: none;
   font-size: 14px;
+  outline: none;
+}
+
+input, select {
+  background: rgba(255,255,255,0.05);
+  color: #fff;
+}
+
+input::placeholder, select::placeholder {
+  color: rgba(255,255,255,0.7);
 }
 
 button {
-  background: #e50914;
+  background: #ff8c00;
   color: white;
+  font-weight: bold;
   cursor: pointer;
+  transition: background 0.3s ease;
 }
 
 button:hover {
-  opacity: 0.85;
+  background: #e07b00;
 }
 
+/* NOTE */
 .note {
-  font-size: 12px;
+  font-size: 13px;
   opacity: 0.7;
   margin-top: 10px;
 }
 
 /* FOOTER */
 footer {
-  padding: 20px;
+  padding: 25px;
   font-size: 14px;
   opacity: 0.8;
+  background: rgba(255, 165, 0, 0.05);
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+/* RESPONSIVE */
+@media screen and (max-width: 768px) {
+  .cards {
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  header h1 {
+    font-size: 2.5rem;
+  }
 }
