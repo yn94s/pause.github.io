@@ -1,0 +1,104 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #0f172a;
+  color: white;
+  text-align: center;
+}
+
+/* HEADER */
+header {
+  padding: 40px 20px;
+}
+
+header h1 {
+  margin-bottom: 10px;
+}
+
+/* CARDS */
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 20px;
+}
+
+.card {
+  background: #111827;
+  padding: 25px;
+  width: 220px;
+  border-radius: 15px;
+  position: relative;
+  box-shadow: 0 0 20px rgba(0,0,0,0.4);
+}
+
+.card h2 {
+  margin-bottom: 10px;
+}
+
+.price {
+  font-size: 24px;
+  color: #22c55e;
+}
+
+.popular {
+  border: 2px solid #e50914;
+}
+
+.badge {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background: #e50914;
+  padding: 5px 10px;
+  border-radius: 10px;
+  font-size: 12px;
+}
+
+/* ORDER FORM */
+.order {
+  padding: 40px 20px;
+}
+
+form {
+  max-width: 400px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+input, select, button {
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  font-size: 14px;
+}
+
+button {
+  background: #e50914;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.85;
+}
+
+.note {
+  font-size: 12px;
+  opacity: 0.7;
+  margin-top: 10px;
+}
+
+/* FOOTER */
+footer {
+  padding: 20px;
+  font-size: 14px;
+  opacity: 0.8;
+}
